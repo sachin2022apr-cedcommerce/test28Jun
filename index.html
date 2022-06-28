@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button id = "submitBtn" onclick="myFunction()">click Me</button>
+    <p id = "output"></p>
+    
+
+    <script>
+        function myFunction(){
+            var a = document.getElementById("input").value;
+            console.log(a.length);
+            var k = [];
+            for(i=0 ; i < a.length ; i++){
+                if(a[i] == 'z' ){
+                    k[i] = 'a';
+                }
+                else {
+                    k[i] = a.charCodeAt(i);
+                k[i]++;
+                k[i] = String.fromCharCode(k[i])
+                }
+            }
+           
+            a = k.toString();
+            document.getElementById("output").innerHTML = a;
+            
+
+        }
+    </script>
+</body>
+</html>
